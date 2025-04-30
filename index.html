@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guitar Pro Viewer</title>
+  <script src="https://cdn.jsdelivr.net/npm/@coderline/alphatab@latest/dist/alphaTab.min.js"></script>
+  <style>
+    html, body { margin: 0; padding: 0; }
+    #alphaTab { height: 100vh; overflow: auto; }
+  </style>
+</head>
+<body>
+  <div id="alphaTab"></div>
+  <script>
+    const player = new alphaTab.AlphaTabApi(document.querySelector("#alphaTab"), {
+      file: "Lv01-CI41.85-Go-Tell-Aunt-Rhody-Jean-Jacques-Rousseau-v1.gp",
+      core: { player: { loop: true, volume: 1 } }
+    });
+  </script>
+</body>
+</html>
