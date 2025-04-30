@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Go Tell Aunt Rhody</title>
+  <script src="https://cdn.jsdelivr.net/npm/@coderline/alphatab@latest/dist/alphaTab.js"></script>
+  <style>
+    html, body { margin: 0; padding: 0; }
+    #alphaTab { width: 100%; height: 95vh; }
+  </style>
+</head>
+<body>
+  <div id="alphaTab"></div>
+  <script>
+    const api = new alphaTab.AlphaTabApi(document.querySelector("#alphaTab"), {
+      file: "Lv01-CI41.85-Go-Tell-Aunt-Rhody-Jean-Jacques-Rousseau-v1.gp",
+      player: {
+        enablePlayer: true,
+        enableLoop: true,
+        soundFont: "https://cdn.jsdelivr.net/npm/@coderline/alphatab@latest/dist/soundfont/sonivox.sf2"
+      }
+    });
+  </script>
+</body>
+</html>
