@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bản nhạc - Go Tell Aunt Rhody</title>
+  <script src="https://cdn.jsdelivr.net/npm/@coderline/alphatab@latest/dist/alphaTab.min.js"></script>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    #alphaTab { border: 1px solid #ccc; padding: 10px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h2>▶ Go Tell Aunt Rhody</h2>
+  <div id="alphaTab"></div>
+  <script>
+    const settings = {
+      file: "GoTellAuntRhody.gp",
+      player: {
+        enablePlayer: true,
+        soundFont: "https://cdn.jsdelivr.net/npm/@coderline/alphatab@latest/dist/soundfont/sonivox.sf2"
+      }
+    };
+    const api = new alphaTab.AlphaTabApi(document.getElementById("alphaTab"), settings);
+  </script>
+</body>
+</html>
