@@ -5,12 +5,17 @@
   <title>Go Tell Aunt Rhody</title>
   <script src="https://cdn.jsdelivr.net/npm/@coderline/alphatab@latest/dist/alphaTab.js"></script>
   <style>
-    html, body { margin: 0; padding: 0; }
-    #alphaTab { width: 100%; height: 95vh; }
+    html, body { margin: 0; padding: 0; font-family: sans-serif; }
+    #alphaTabContainer { padding: 10px; }
+    .at-controls { background: #f0f0f0; padding: 5px; }
   </style>
 </head>
 <body>
-  <div id="alphaTab"></div>
+  <div id="alphaTabContainer">
+    <div class="at-controls"></div>
+    <div id="alphaTab"></div>
+  </div>
+
   <script>
     const api = new alphaTab.AlphaTabApi(document.querySelector("#alphaTab"), {
       file: "Lv01-CI41.85-Go-Tell-Aunt-Rhody-Jean-Jacques-Rousseau-v1.gp",
@@ -18,8 +23,19 @@
         enablePlayer: true,
         enableLoop: true,
         soundFont: "https://cdn.jsdelivr.net/npm/@coderline/alphatab@latest/dist/soundfont/sonivox.sf2"
+      },
+      display: {
+        layoutMode: "page"
+      },
+      notation: {
+        rhythmMode: "hidden"
+      },
+      rendering: {
+        engine: "svg"
       }
     });
+
+    new alphaTab.controls.PlayerControls(api, document.querySelector(".at-controls"));
   </script>
 </body>
 </html>
